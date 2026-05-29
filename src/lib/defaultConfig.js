@@ -4,7 +4,7 @@ export const DEFAULT_CONFIG = {
   site: {
     title: '小福老师',
     subtitle: 'AI探索者 · 西工大硕士',
-    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face',
+    avatar: '/avatar.jpg',
     avatarBase64: '',
   },
 

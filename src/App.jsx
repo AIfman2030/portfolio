@@ -17,6 +17,7 @@ import Journey from './pages/Journey'
 import ContentOps from './pages/ContentOps'
 import Hub from './pages/Hub'
 import HubOps from './pages/HubOps'
+import NotFound from './pages/NotFound'
 
 export default function App() {
   const [theme, setTheme] = useState('light')
@@ -63,6 +64,7 @@ export default function App() {
           <Route path="/content-ops" element={<ContentOps theme={theme} />} />
           <Route path="/hub" element={<Hub theme={theme} />} />
           <Route path="/hub/ops" element={<HubOps theme={theme} />} />
+          <Route path="*" element={<NotFound theme={theme} />} />
         </Routes>
         {showAdmin && (
           <AdminDashboardNew
