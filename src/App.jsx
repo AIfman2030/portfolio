@@ -10,7 +10,6 @@ import Connect from './pages/Connect'
 import Reading from './pages/Reading'
 import Exercise from './pages/Exercise'
 import Admin from './pages/Admin'
-import AdminDashboardNew from './components/AdminDashboardNew'
 
 // Legacy pages (kept for backward compatibility, accessible via direct URL)
 import Journey from './pages/Journey'
@@ -21,7 +20,6 @@ import NotFound from './pages/NotFound'
 
 export default function App() {
   const [theme, setTheme] = useState('light')
-  const [showAdmin, setShowAdmin] = useState(false)
 
   useEffect(() => {
     try {
@@ -49,7 +47,6 @@ export default function App() {
         <Nav
           theme={theme}
           onThemeToggle={handleThemeToggle}
-          onAdminClick={() => setShowAdmin(true)}
         />
         <Routes>
           <Route path="/" element={<HomeNew theme={theme} />} />
@@ -66,11 +63,6 @@ export default function App() {
           <Route path="/hub/ops" element={<HubOps theme={theme} />} />
           <Route path="*" element={<NotFound theme={theme} />} />
         </Routes>
-        {showAdmin && (
-          <AdminDashboardNew
-            onClose={() => setShowAdmin(false)}
-          />
-        )}
         
         {/* AI 数字分身助手 */}
         <AIAssistant theme={theme} />

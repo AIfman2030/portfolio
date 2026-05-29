@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { Settings, Sun, Moon, Menu, X } from 'lucide-react'
 
 // 社交图标组件
@@ -27,10 +27,11 @@ function XiaohongshuIcon({ size = 16 }) {
   )
 }
 
-export default function Nav({ theme, onThemeToggle, onAdminClick }) {
+export default function Nav({ theme, onThemeToggle }) {
   const isDark = theme === 'dark'
   const [menuOpen, setMenuOpen] = useState(false)
   const location = useLocation()
+  const navigate = useNavigate()
   const path = location.pathname
 
   const textColor    = isDark ? '#E6EDF3' : '#1C1C1E'
@@ -133,9 +134,10 @@ export default function Nav({ theme, onThemeToggle, onAdminClick }) {
             {isDark ? <Sun size={14} /> : <Moon size={14} />}
           </button>
           <button
-            onClick={onAdminClick}
+            onClick={() => navigate('/admin')}
             className="p-2 rounded-lg border transition-all"
             style={{ borderColor: borderColor, color: mutedColor }}
+            title="后台管理"
           >
             <Settings size={14} />
           </button>
