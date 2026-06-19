@@ -1,4 +1,4 @@
-# AIfman · 人生控制台
+# AIfman · 个人网站
 
 > 少工作，多赚钱，以书为粮，以路为行。
 
@@ -22,9 +22,9 @@
 
 ---
 
-## 二、这个网站是什么
+## 二、个人网站是什么
 
-**个人名片。**
+**是我的个人名片数字时代的同行证**
 
 - **中心：** 我是谁（头像、自我介绍、座右铭、作品）
 - **线一：读书** — 阅读记录、年度进度、读书笔记
@@ -123,7 +123,7 @@ npm run preview
 ## 八、找我
 
 - 微信公众号：**小福AI自由**
-- GitHub：https://github.com/JoesFyj
+- GitHub：https://github.com/AIfman2025
 - 线上地址：https://portfolio-zhifuxia.vercel.app
 
 ---
