@@ -271,6 +271,17 @@ export default function Admin({ theme }) {
                 </div>
               </FormGroup>
               
+              <FormGroup label="左上角品牌名">
+                <input
+                  type="text"
+                  value={config.hero.brandName || ''}
+                  onChange={(e) => updateField('hero', 'brandName', e.target.value)}
+                  placeholder="默认显示 AIfman"
+                  className="w-full px-4 py-2 rounded-lg border text-sm"
+                  style={{ borderColor: border, background: cardBg, color: text }}
+                />
+              </FormGroup>
+              
               <FormGroup label="名字">
                 <input
                   type="text"

@@ -5,6 +5,7 @@ const DEFAULT_CONFIG = {
   // ===== Hero 区域配置 =====
   hero: {
     enabled: true,
+    brandName: 'AIfman', // 左上角品牌名
     tag: '甘肃深山 → AI 自由职业',
     avatar: '🧑‍💻', // 可以是 emoji 或图片 URL
     name: 'AIfman',

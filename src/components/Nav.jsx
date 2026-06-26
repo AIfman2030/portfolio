@@ -1,6 +1,7 @@
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { Settings, Sun, Moon, Menu, X } from 'lucide-react'
+import { getConfig } from '../config/siteConfig'
 
 // 社交图标组件
 function GitHubIcon({ size = 16 }) {
@@ -46,6 +47,9 @@ export default function Nav({ theme, onThemeToggle }) {
     return path.startsWith(p)
   }
 
+  const cfg = useMemo(() => getConfig(), [])
+  const brandName = cfg?.hero?.brandName || cfg?.hero?.name || 'AIfman'
+
   const links = [
     { to: '/',      label: '首页' },
     { to: '/works', label: '作品' },
@@ -69,7 +73,7 @@ export default function Nav({ theme, onThemeToggle }) {
           style={{ color: textColor }}
           onClick={() => setMenuOpen(false)}
         >
-          小福AI自由
+          {brandName}
         </Link>
 
         {/* Desktop Nav */}
