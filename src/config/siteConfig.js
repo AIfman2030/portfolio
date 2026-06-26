@@ -5,11 +5,11 @@ const DEFAULT_CONFIG = {
   // ===== Hero 区域配置 =====
   hero: {
     enabled: true,
-    tag: '从甘肃深山到职业自由的普通人',
+    tag: '甘肃深山 → AI 自由职业',
     avatar: '🧑‍💻', // 可以是 emoji 或图片 URL
-    name: '小福',
-    title: '你好，我是小福',
-    subtitle: '一个人 + 7个AI Agent = 24小时帮你干活',
+    name: 'AIfman',
+    title: 'AIfman · 艾弗曼',
+    subtitle: '思想开辟者 · 用 AI 给自己造一条自由的路',
     motto: '少工作，多赚钱，以书为粮，以路为行',
     // 打字机效果
     typewriter: {
@@ -83,19 +83,19 @@ const DEFAULT_CONFIG = {
       },
       {
         id: 2,
-        name: 'VideoGenerator V2',
-        desc: '动画视频自动生成引擎，5套风格预设，一键生成抖音口播视频',
+        name: 'Content2Video · 内容转视频',
+        desc: '输入文案一键生成动画视频，8种视觉风格，Canvas渲染+AI图片+TTS配音+MP4导出',
         icon: '🎬',
-        color: '#2D6A4F',
-        url: 'https://40cb5522c78940d6856379baab1876af.prod.enter.pro/',
+        color: '#d97706',
+        url: 'https://content-to-video.vercel.app',
         external: true,
         enabled: true,
         category: 'ai-tools',
-        features: ['Next.js', 'FastAPI', 'LangGraph'],
+        features: ['React', 'Canvas', 'TTS', 'FFmpeg'],
         images: [
-          'https://placehold.co/600x340/2D6A4F/ffffff?text=Video+Editor',
-          'https://placehold.co/600x340/1B4332/ffffff?text=Style+Presets',
-          'https://placehold.co/600x340/40916C/ffffff?text=Export+Panel',
+          'https://placehold.co/600x340/d97706/ffffff?text=Content2Video',
+          'https://placehold.co/600x340/b45309/ffffff?text=8+Styles',
+          'https://placehold.co/600x340/92400e/ffffff?text=MP4+Export',
         ],
       },
     ],
@@ -245,7 +245,7 @@ const DEFAULT_CONFIG = {
   // ===== 关于我配置 =====
   about: {
     enabled: true,
-    title: '联系小福',
+    title: '联系 AIfman',
     subtitle: '选择你喜欢的方式，随时找我聊聊',
     
     // 主视觉背景图
