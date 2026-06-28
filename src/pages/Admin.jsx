@@ -187,10 +187,10 @@ export default function Admin({ theme }) {
         </div>
       </header>
 
-      <div className="max-w-7xl mx-auto flex">
-        {/* 左侧模块导航 */}
-        <aside className="w-64 min-h-[calc(100vh-80px)] border-r p-4" style={{ borderColor: border }}>
-          <div className="space-y-2">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row">
+        {/* 左侧模块导航：手机端横向滚动，桌面端竖向侧边栏 */}
+        <aside className="w-full md:w-64 md:min-h-[calc(100vh-80px)] md:border-r px-2 md:p-4 overflow-x-auto" style={{ borderColor: border }}>
+          <div className="flex md:flex-col gap-2 py-2 md:py-0 md:space-y-2">
             {Object.keys(MODULE_TITLES).map(moduleName => {
               const Icon = MODULE_ICONS[moduleName]
               const isEnabled = config[moduleName]?.enabled
@@ -203,7 +203,7 @@ export default function Admin({ theme }) {
                       setActiveModule(moduleName)
                       toggleExpand(moduleName)
                     }}
-                    className="w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-all"
+                    className="md:w-full flex items-center gap-2 md:gap-3 px-3 md:px-4 py-2 md:py-3 rounded-lg transition-all whitespace-nowrap shrink-0"
                     style={{ 
                       background: activeModule === moduleName ? (isDark ? 'rgba(45,106,79,0.15)' : 'rgba(45,106,79,0.08)') : 'transparent',
                     }}
@@ -231,7 +231,7 @@ export default function Admin({ theme }) {
         </aside>
 
         {/* 右侧配置区域 */}
-        <main className="flex-1 p-8">
+        <main className="flex-1 p-4 md:p-8">
           {/* Hero 配置 */}
           {activeModule === 'hero' && (
             <ModuleSection title="Hero 区域配置" description="首页顶部展示区域">
@@ -392,7 +392,7 @@ export default function Admin({ theme }) {
                       />
                     </FormGroup>
 
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <FormGroup label="我是 颜色">
                         <div className="flex items-center gap-2">
                           <input
@@ -796,7 +796,7 @@ export default function Admin({ theme }) {
                     theme={theme}
                   />
                 </FormGroup>
-                <div className="grid grid-cols-2 gap-4 mt-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
                   <FormGroup label="年度目标">
                     <input
                       type="number"
@@ -1220,7 +1220,7 @@ export default function Admin({ theme }) {
 
               <div className="mt-6 p-4 rounded-lg" style={{ background: isDark ? '#0D1117' : '#F8F7F4' }}>
                 <h4 className="text-sm font-medium mb-4" style={{ color: text }}>核心数据</h4>
-                <div className="grid grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   <FormGroup label="连续打卡(天)">
                     <input
                       type="number"
