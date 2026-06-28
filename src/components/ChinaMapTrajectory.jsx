@@ -271,7 +271,7 @@ export default function ChinaMapTrajectory({ theme, config = {} }) {
       {/* 地图区域 */}
       <div
         ref={containerRef}
-        style={{ width: '100%', height: '420px' }}
+        style={{ width: '100%', height: 'clamp(280px, 50vw, 420px)' }}
       />
 
       {/* 统计栏 */}

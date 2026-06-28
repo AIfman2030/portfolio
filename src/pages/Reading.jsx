@@ -44,7 +44,7 @@ export default function Reading({ theme }) {
 
   return (
     <div className="min-h-screen" style={{ background: bg }}>
-      <div className="max-w-5xl mx-auto px-6 py-20">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 py-10 md:py-20">
 
         {/* 返回 */}
         <Link
@@ -57,7 +57,7 @@ export default function Reading({ theme }) {
 
         {/* 标题 */}
         <div className="mb-10">
-          <h1 className="font-serif text-4xl font-bold mb-2" style={{ color: text }}>
+          <h1 className="font-serif text-3xl md:text-4xl font-bold mb-2" style={{ color: text }}>
             {readingConfig.title || '读书 · 以书为粮'}
           </h1>
           <p className="text-sm" style={{ color: muted }}>
@@ -174,7 +174,7 @@ export default function Reading({ theme }) {
                       </div>
                       {book.articleUrl && (
                         <Link to={book.articleUrl}
-                          className="flex-shrink-0 text-sm font-medium flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity"
+                          className="flex-shrink-0 text-sm font-medium flex items-center gap-1 md:opacity-0 md:group-hover:opacity-100 transition-opacity"
                           style={{ color: accent }}>
                           查看笔记 <ChevronRight size={14} />
                         </Link>

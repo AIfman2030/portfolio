@@ -100,7 +100,7 @@ export default function Nav({ theme, onThemeToggle }) {
             href="https://github.com/xiaofu"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2 rounded-lg border transition-all hover:opacity-70"
+            className="p-2 rounded-lg border transition-all hover:opacity-70 hidden sm:inline-flex"
             style={{ borderColor: borderColor, color: mutedColor }}
             title="GitHub"
           >
@@ -110,7 +110,7 @@ export default function Nav({ theme, onThemeToggle }) {
             href="https://twitter.com/xiaofu"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2 rounded-lg border transition-all hover:opacity-70"
+            className="p-2 rounded-lg border transition-all hover:opacity-70 hidden sm:inline-flex"
             style={{ borderColor: borderColor, color: mutedColor }}
             title="推特"
           >
@@ -120,14 +120,14 @@ export default function Nav({ theme, onThemeToggle }) {
             href="https://xiaohongshu.com/user/xiaofu"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2 rounded-lg border transition-all hover:opacity-70"
+            className="p-2 rounded-lg border transition-all hover:opacity-70 hidden sm:inline-flex"
             style={{ borderColor: borderColor, color: mutedColor }}
             title="小红书"
           >
             <XiaohongshuIcon size={16} />
           </a>
 
-          <div className="w-px h-5 mx-1" style={{ background: borderColor }} />
+          <div className="w-px h-5 mx-1 hidden sm:block" style={{ background: borderColor }} />
 
           <button
             onClick={onThemeToggle}
@@ -177,6 +177,38 @@ export default function Nav({ theme, onThemeToggle }) {
               {label}
             </Link>
           ))}
+          <div className="border-t pt-3 mt-1" style={{ borderColor: borderColor }}>
+            <a
+              href="https://github.com/xiaofu"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-3 text-sm rounded-lg transition-all"
+              style={{ color: mutedColor }}
+              onClick={() => setMenuOpen(false)}
+            >
+              <GitHubIcon size={16} /> GitHub
+            </a>
+            <a
+              href="https://twitter.com/xiaofu"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-3 text-sm rounded-lg transition-all"
+              style={{ color: mutedColor }}
+              onClick={() => setMenuOpen(false)}
+            >
+              <TwitterIcon size={16} /> 推特
+            </a>
+            <a
+              href="https://xiaohongshu.com/user/xiaofu"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-3 text-sm rounded-lg transition-all"
+              style={{ color: mutedColor }}
+              onClick={() => setMenuOpen(false)}
+            >
+              <XiaohongshuIcon size={16} /> 小红书
+            </a>
+          </div>
         </div>
       )}
     </nav>

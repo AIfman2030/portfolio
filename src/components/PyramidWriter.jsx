@@ -293,11 +293,11 @@ function ArticleEditor({ pyramid, content, setContent, title, setTitle, type }) 
       </div>
 
       {/* 分割：大纲 | 编辑器 */}
-      <div className="flex gap-3" style={{ minHeight: 400 }}>
-        {/* 左侧大纲 */}
+      <div className="flex flex-col md:flex-row gap-3" style={{ minHeight: 400 }}>
+        {/* 大纲（移动端在上方） */}
         <div
-          className="w-64 shrink-0 rounded-lg p-4 overflow-y-auto"
-          style={{ background: 'var(--card-bg-secondary, #fafafa)', border: '1px solid var(--border, #eee)', maxHeight: 'calc(100vh - 400px)' }}
+          className="w-full md:w-64 md:shrink-0 rounded-lg p-4 overflow-y-auto"
+          style={{ background: 'var(--card-bg-secondary, #fafafa)', border: '1px solid var(--border, #eee)', maxHeight: '40vh', mdMaxHeight: 'calc(100vh - 400px)' }}
         >
           <h4 className="text-xs font-semibold mb-3 text-muted-foreground">📐 金字塔大纲</h4>
           
@@ -452,7 +452,7 @@ export default function PyramidWriter({ type, record, onSave, onCancel }) {
 
       {/* 主体 */}
       {step === 0 ? (
-        <div className="flex gap-4">
+        <div className="flex flex-col md:flex-row gap-4">
           <div className="flex-1 min-w-0">
             <PyramidEditor pyramid={pyramid} setPyramid={setPyramid} record={record} type={type} />
             <div className="flex items-center justify-between mt-4">
@@ -473,7 +473,7 @@ export default function PyramidWriter({ type, record, onSave, onCancel }) {
               </button>
             </div>
           </div>
-          <div className="w-56 shrink-0 space-y-3" style={{ marginTop: 32 }}>
+          <div className="w-full md:w-56 md:shrink-0 space-y-3" style={{ marginTop: 32 }}>
             <TypeHint type={type} />
             {/* 迷你金字塔预览 */}
             <div className="p-3 rounded-lg text-xs" style={{ background: 'var(--card-bg-secondary, #fafafa)', border: '1px solid var(--border, #eee)' }}>

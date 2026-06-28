@@ -166,9 +166,9 @@ export default function HomeNew({ theme }) {
       {/* SECTION 1: Hero — 左右双栏 */}
       {/* ==================================================== */}
       {heroConfig.enabled !== false && (
-        <section className="relative flex items-center" style={{ minHeight: '90dvh', paddingTop: '4rem' }}>
+        <section className="relative flex items-center" style={{ minHeight: '100svh', paddingTop: '4rem' }}>
           <div className="relative z-10 w-full max-w-6xl mx-auto px-6">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
 
               {/* 左侧：文字区 */}
               <div>
@@ -180,8 +180,8 @@ export default function HomeNew({ theme }) {
                   <span className="text-sm font-medium" style={{ color: accent }}>{heroConfig.tag}</span>
                 </div>
 
-                <div className="mb-6">
-                  <div className="w-24 h-24 md:w-28 md:h-28 rounded-full flex items-center justify-center overflow-hidden"
+                <div className="mb-6 flex justify-center lg:justify-start">
+                  <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-full flex items-center justify-center overflow-hidden"
                     style={{ background: isDark ? '#21262D' : '#F0EFEA', border: `3px solid ${border}` }}>
                     {heroConfig.avatar ? (
                       <img src={heroConfig.avatar} alt="头像" className="w-full h-full object-cover" />
@@ -242,7 +242,7 @@ export default function HomeNew({ theme }) {
 
               {/* 右侧：作品轮播 */}
               {worksConfig.showOnHero !== false && enabledWorks.length > 0 && (
-                <div className="hidden lg:block">
+                <div className="hidden lg:block mt-8 lg:mt-0">
                   <HeroWorksShowcase works={enabledWorks} theme={theme} />
                 </div>
               )}
@@ -255,9 +255,9 @@ export default function HomeNew({ theme }) {
       {/* SECTION 2: 我能做什么 — 能力卡片 */}
       {/* ==================================================== */}
       {capabilities.length > 0 && (
-        <section className="py-20 px-6" style={{ background: bg }}>
+        <section className="py-12 md:py-20 px-4 sm:px-6" style={{ background: bg }}>
           <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-12">
+            <div className="text-center mb-8 md:mb-12">
               <h2 className="font-serif text-2xl md:text-3xl font-bold mb-3" style={{ color: text }}>
                 我能做什么
               </h2>
@@ -293,9 +293,9 @@ export default function HomeNew({ theme }) {
       {/* SECTION 3: 精选作品 */}
       {/* ==================================================== */}
       {worksConfig.enabled !== false && enabledWorks.length > 0 && (
-        <section className="py-20 px-6" style={{ background: altBg }}>
+        <section className="py-12 md:py-20 px-4 sm:px-6" style={{ background: altBg }}>
           <div className="max-w-5xl mx-auto">
-            <div className="flex items-end justify-between mb-10">
+            <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-6 md:mb-10 gap-3">
               <div>
                 <h2 className="font-serif text-2xl md:text-3xl font-bold mb-2" style={{ color: text }}>
                   {worksConfig.title || '精选作品'}
@@ -358,9 +358,9 @@ export default function HomeNew({ theme }) {
       {/* SECTION 4: 我的日常 — 读书 + 跑步（轻量汇总卡片） */}
       {/* ==================================================== */}
       {(readingConfig.enabled !== false || exerciseConfig.enabled !== false) && (
-        <section className="py-20 px-6" style={{ background: bg }}>
+        <section className="py-12 md:py-20 px-4 sm:px-6" style={{ background: bg }}>
           <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-10">
+            <div className="text-center mb-6 md:mb-10">
               <h2 className="font-serif text-2xl md:text-3xl font-bold mb-2" style={{ color: text }}>
                 我的日常
               </h2>
@@ -478,7 +478,7 @@ export default function HomeNew({ theme }) {
       {/* SECTION 5: 联系我 */}
       {/* ==================================================== */}
       {aboutConfig.enabled !== false && (
-        <section className="py-20 px-6" style={{ background: altBg }}>
+        <section className="py-12 md:py-20 px-4 sm:px-6" style={{ background: altBg }}>
           <div className="max-w-3xl mx-auto text-center">
             <div className="flex items-center justify-center gap-3 mb-4">
               <span className="w-2 h-2 rounded-full" style={{ background: accent }} />

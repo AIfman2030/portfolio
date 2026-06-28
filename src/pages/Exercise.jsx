@@ -42,7 +42,7 @@ export default function Exercise({ theme }) {
 
   return (
     <div className="min-h-screen" style={{ background: bg }}>
-      <div className="max-w-5xl mx-auto px-6 py-20">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 py-10 md:py-20">
 
         {/* 返回 */}
         <Link
@@ -55,7 +55,7 @@ export default function Exercise({ theme }) {
 
         {/* 标题 */}
         <div className="mb-10">
-          <h1 className="font-serif text-4xl font-bold mb-2" style={{ color: text }}>
+          <h1 className="font-serif text-3xl md:text-4xl font-bold mb-2" style={{ color: text }}>
             {exerciseConfig.title || '锻炼 · 以路为行'}
           </h1>
           <p className="text-sm" style={{ color: muted }}>
@@ -153,7 +153,7 @@ export default function Exercise({ theme }) {
                     <div className="flex items-center gap-2">
                       {record.articleUrl && (
                         <Link to={record.articleUrl}
-                          className="text-xs font-medium flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity"
+                          className="text-xs font-medium flex items-center gap-1 md:opacity-0 md:group-hover:opacity-100 transition-opacity"
                           style={{ color: accent }}>
                           查看记录 <ChevronRight size={12} />
                         </Link>

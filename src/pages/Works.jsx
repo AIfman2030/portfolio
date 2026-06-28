@@ -309,7 +309,7 @@ export default function Works({ theme }) {
           <ChevronLeft size={16} /> 返回首页
         </Link>
 
-        <div className="flex flex-col lg:flex-row gap-12">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
           {/* 左侧边栏 */}
           <Sidebar
             categories={categories}
@@ -324,7 +324,7 @@ export default function Works({ theme }) {
           <div className="flex-1 min-w-0">
             {/* 标题区 */}
             <div className="mb-10">
-              <h1 className="font-serif text-4xl md:text-5xl font-bold mb-3" style={{ color: text }}>
+              <h1 className="font-serif text-3xl md:text-5xl font-bold mb-3" style={{ color: text }}>
                 {worksConfig.title || '作品集'}
               </h1>
               <p className="text-base" style={{ color: muted }}>
