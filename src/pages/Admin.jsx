@@ -8,6 +8,7 @@ import { getConfig, saveConfig, resetConfig, exportConfig, importConfig } from '
 import ImageUploader, { AvatarUploader } from '../components/ImageUploader'
 import MultiImageUploader from '../components/MultiImageUploader'
 import AIWriter from '../components/AIWriter'
+import PyramidWriter from '../components/PyramidWriter'
 
 // 模块图标映射
 const MODULE_ICONS = {
